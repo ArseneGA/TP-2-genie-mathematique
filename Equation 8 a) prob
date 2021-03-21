@@ -1,0 +1,22 @@
+from math import *
+
+def g1(x):
+    return (17 + x**2 - x**4)/4
+
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew
+
+print(PointFixe(g1, 0, 10**(-10), 100000))
+
