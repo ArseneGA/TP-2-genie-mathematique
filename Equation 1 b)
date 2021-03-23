@@ -1,6 +1,6 @@
 from math import *
 
-def g1(x):
+def g1moins(x):
     return -sqrt(sqrt(9 - 3*x))
 
 def PointFixe(g, xo, epsilon, Nitermax ):
