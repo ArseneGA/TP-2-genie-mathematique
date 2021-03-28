@@ -1,0 +1,20 @@
+import math as m
+
+def g10(x):
+    return m.log(10/(m.log(x**2+4)))
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew
+
+print(PointFixe(g10, 2, 10**(-6), 50000))
