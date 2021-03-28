@@ -1,5 +1,5 @@
 import math as m
-def g2(x):
+def g2un(x):
     return m.acos((x+2)/3)
 
 def PointFixe(g, xo, epsilon, Nitermax ):
@@ -16,4 +16,4 @@ def PointFixe(g, xo, epsilon, Nitermax ):
         n += 1
     return xnew
 
-print(PointFixe(g2, 0.5, 10**(-10), 50000))
+print(PointFixe(g2un, 0.5, 10**(-10), 50000))
