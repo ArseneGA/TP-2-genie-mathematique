@@ -17,4 +17,4 @@ def PointFixe(g, xo, epsilon, Nitermax ):
         n += 1
     return xnew, n
 
-print(PointFixe(g2, -1.5, 10**(-10), 50000))
+print(PointFixe(g2deux, -1.5, 10**(-10), 50000))
