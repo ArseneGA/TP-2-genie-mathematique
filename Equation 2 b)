@@ -1,6 +1,6 @@
 import math as m
 
-def g2(x):
+def g2deux(x):
     return m.(-acos((x+2)/3))
 
 def PointFixe(g, xo, epsilon, Nitermax ):
