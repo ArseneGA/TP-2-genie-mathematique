@@ -1,0 +1,20 @@
+import math as m
+
+def g2(x):
+    return m.(-acos((x+2)/3))
+
+def PointFixe(g, xo, epsilon, Nitermax ):
+    xold = xo
+    n = 1
+    xnew = g(xold)
+    diff = xnew - xold
+    xold = xnew
+    
+    while abs(diff) > epsilon and n < Nitermax:
+        xnew = g(xold)
+        diff = xnew - xold
+        xold = xnew
+        n += 1
+    return xnew, n
+
+print(PointFixe(g2, -1.5, 10**(-10), 50000))
