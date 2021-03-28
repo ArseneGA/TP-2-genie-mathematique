@@ -15,6 +15,6 @@ def PointFixe(g, xo, epsilon, Nitermax ):
         diff = xnew - xold
         xold = xnew
         n += 1
-    return xnew, n
+    return xnew
 
-print(PointFixe(g1, -3, 10**(-3), 50000))
+print(PointFixe(g1plus, 1.5, 10**(-10), 50000))
