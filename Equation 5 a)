@@ -1,7 +1,7 @@
-from math import *
+import math as m
 
-def g1(x):
-    return atan((x + 5)/2)
+def g5(x):
+    return m.atan((x + 5)/2)
 
 def PointFixe(g, xo, epsilon, Nitermax ):
     xold = xo
@@ -17,5 +17,5 @@ def PointFixe(g, xo, epsilon, Nitermax ):
         n += 1
     return xnew
 
-print(PointFixe(g1, 1, 10**(-10), 100000))
+print(PointFixe(g5, 1, 10**(-6), 50000))
 
