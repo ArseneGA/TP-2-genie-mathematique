@@ -1,7 +1,6 @@
-from math import *
-
-def g1(x):
-    return acos((x+2)/2)
+import math as m
+def g2(x):
+    return m.acos((x+2)/3)
 
 def PointFixe(g, xo, epsilon, Nitermax ):
     xold = xo
@@ -15,7 +14,6 @@ def PointFixe(g, xo, epsilon, Nitermax ):
         diff = xnew - xold
         xold = xnew
         n += 1
-    return xnew, n
+    return xnew
 
-print(PointFixe(g1, 0, 10**(-3), 50000))
-
+print(PointFixe(g2, 0.5, 10**(-10), 50000))
