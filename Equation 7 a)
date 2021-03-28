@@ -1,7 +1,7 @@
-from math import *
+import math as m
 
-def g1(x):
-    return (7 - 4*log(x))/3
+def g7(x):
+    return (7 - 4*m.log(x))/3
 
 def PointFixe(g, xo, epsilon, Nitermax ):
     xold = xo
@@ -17,4 +17,4 @@ def PointFixe(g, xo, epsilon, Nitermax ):
         n += 1
     return xnew
 
-print(PointFixe(g1, 1, 10**(-10), 100000))
+print(PointFixe(g7, 1, 10**(-6), 50000))
